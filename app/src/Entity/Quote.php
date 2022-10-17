@@ -60,11 +60,11 @@ class Quote
     public function setYear(string $year): self
     {
         $this->year = $year;
-
         return $this;
     }
 
-    public function __construct($quote, $historian, $year) {
+    public function __construct($quote, $historian, $year)
+    {
         $this->quote = $quote;
         $this->historian = $historian;
         $this->year = $year;

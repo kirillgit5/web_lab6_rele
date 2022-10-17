@@ -9,7 +9,7 @@ use Faker\Factory;
 
 class QuoteFixture extends Fixture
 {
-    private  $faker;
+    private $faker;
 
     public function __construct() {
         $this->faker = Factory::create();

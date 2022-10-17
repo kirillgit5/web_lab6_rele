@@ -14,18 +14,17 @@ class DashboardController extends AbstractDashboardController
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
-         return $this->render('admin/index.html.twig');
+        return $this->render('admin/index.html.twig');
     }
 
     public function configureDashboard(): Dashboard
     {
-        return Dashboard::new()
-            ->setTitle('Symfony Docker');
+        return Dashboard::new()->setTitle('Symfony Docker');
     }
 
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
-         yield MenuItem::linkToCrud('Quote', 'fas fa-list', Quote::class);
+        yield MenuItem::linkToCrud('Quote', 'fas fa-list', Quote::class);
     }
 }
